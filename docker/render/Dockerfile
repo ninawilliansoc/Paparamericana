@@ -20,7 +20,6 @@ RUN if [ -n "$GREETING_URL" ]; then \
 COPY . .
 RUN npm install
 RUN npm run build
-RUN --mount=type=secret,id=_env,dst=/etc/secrets/.env cat /etc/secrets/.env >> .env
 EXPOSE 10000
 ENV NODE_ENV=production
 CMD [ "npm", "start" ]
