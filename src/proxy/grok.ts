@@ -22,7 +22,7 @@ const grokResponseHandler: ProxyResHandlerWithBody = async (
 
 const grokProxy = createQueuedProxyMiddleware({
   mutations: [addKey, finalizeBody],
-  target: "https://api.x.ai/",
+  target: "https://api.x.ai",
   blockingResponseHandler: grokResponseHandler,
 });
 
